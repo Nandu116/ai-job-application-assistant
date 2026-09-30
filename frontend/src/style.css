@@ -1,0 +1,482 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* -----------------------------
+   Header
+----------------------------- */
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  margin: 0 0 12px;
+  font-size: 38px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.header p {
+  max-width: 700px;
+  margin: auto;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* -----------------------------
+   Cards
+----------------------------- */
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 25px;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow:
+    0 4px 15px
+    rgba(15, 23, 42, 0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.card h3 {
+  color: #334155;
+}
+
+/* -----------------------------
+   Resume Upload
+----------------------------- */
+
+.upload-area {
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+
+  padding: 35px;
+
+  text-align: center;
+
+  background: #f8fafc;
+
+  transition: 0.2s;
+}
+
+.upload-area:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.upload-area p {
+  color: #64748b;
+  margin-top: 0;
+}
+
+/* -----------------------------
+   File Input
+----------------------------- */
+
+input[type="file"] {
+  margin: 15px 0;
+
+  padding: 8px;
+
+  border-radius: 8px;
+
+  border: 1px solid #cbd5e1;
+
+  background: white;
+}
+
+/* -----------------------------
+   Textarea
+----------------------------- */
+
+textarea {
+  width: 100%;
+
+  min-height: 260px;
+
+  padding: 16px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 12px;
+
+  resize: vertical;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(37, 99, 235, 0.1);
+}
+
+.card > p {
+  color: #64748b;
+}
+
+/* -----------------------------
+   Buttons
+----------------------------- */
+
+button {
+  border: none;
+
+  border-radius: 9px;
+
+  padding: 12px 20px;
+
+  margin-top: 15px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: #94a3b8;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* -----------------------------
+   Resume Text
+----------------------------- */
+
+.resume-text {
+  max-height: 300px;
+
+  overflow-y: auto;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  padding: 16px;
+
+  border-radius: 10px;
+
+  white-space: pre-wrap;
+
+  line-height: 1.6;
+
+  color: #475569;
+}
+
+/* -----------------------------
+   Match Analysis
+----------------------------- */
+
+.result-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 25px;
+
+  margin-bottom: 20px;
+}
+
+.match-score {
+  text-align: center;
+
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff,
+      #dbeafe
+    );
+
+  border-radius: 14px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #bfdbfe;
+}
+
+.match-score p {
+  margin: 0 0 8px;
+
+  color: #475569;
+
+  font-weight: 600;
+}
+
+.match-score h3 {
+  margin: 0;
+
+  color: #2563eb;
+
+  font-size: 44px;
+}
+
+/* -----------------------------
+   Skills
+----------------------------- */
+
+.skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  min-height: 30px;
+}
+
+.skill {
+  background: #e0f2fe;
+
+  color: #0369a1;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.missing-skill {
+  background: #fee2e2;
+
+  color: #b91c1c;
+}
+
+/* -----------------------------
+   AI Result
+----------------------------- */
+
+.ai-button {
+  background: #7c3aed;
+}
+
+.ai-button:hover {
+  background: #6d28d9;
+}
+
+.ai-result {
+  margin-top: 20px;
+
+  background: #faf5ff;
+
+  border: 1px solid #e9d5ff;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  white-space: pre-wrap;
+
+  line-height: 1.7;
+
+  color: #475569;
+}
+
+/* -----------------------------
+   Application History
+----------------------------- */
+
+.history-item {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  margin-top: 15px;
+
+  transition: 0.2s;
+}
+
+.history-item:hover {
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 4px 12px
+    rgba(15, 23, 42, 0.05);
+}
+
+.history-item h3 {
+  margin-top: 0;
+
+  color: #0f172a;
+}
+
+.history-item p {
+  margin: 8px 0;
+
+  color: #64748b;
+}
+
+/* -----------------------------
+   Status Dropdown
+----------------------------- */
+
+.history-item select,
+.card select {
+  padding: 9px 12px;
+
+  border-radius: 8px;
+
+  border: 1px solid #cbd5e1;
+
+  background: white;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+.history-item select:focus,
+.card select:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(37, 99, 235, 0.1);
+}
+
+/* -----------------------------
+   Application Details
+----------------------------- */
+
+.card strong {
+  color: #0f172a;
+}
+
+/* -----------------------------
+   Scrollbar
+----------------------------- */
+
+.resume-text::-webkit-scrollbar {
+  width: 7px;
+}
+
+.resume-text::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.resume-text::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 10px;
+}
+
+/* -----------------------------
+   Mobile
+----------------------------- */
+
+@media (max-width: 700px) {
+
+  .app {
+    padding: 25px 15px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .match-score h3 {
+    font-size: 36px;
+  }
+
+  .upload-area {
+    padding: 25px 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .history-item button {
+    margin-left: 0 !important;
+  }
+
+}
